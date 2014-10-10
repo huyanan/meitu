@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>美图筛选</title>
+  </head>
+  <body>
+    <pre id="response">Loading...</pre>
+    <script type="text/javascript" src="facepp/facepp-sdk.min.js"></script>
+    <script type="text/javascript" src="config.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript">
+      (function() {
+        /*var api = new FacePP('0ef14fa726ce34d820c5a44e57fef470', '4Y9YXOMSDvqu1Ompn9NSpNwWQFHs1hYD');
+        api.request('detection/detect', {
+          url: 'http://cn.faceplusplus.com/static/resources/python_demo/1.jpg'
+        }, function(err, result) {
+          if (err) {
+            // TODO handle error
+            return;
+          }
+          // TODO use result
+          document.getElementById('response').innerHTML = JSON.stringify(result, null, 2);
+        });*/
+        var app = new App(cfg);
+        app.prettyPic('http://read.pudn.com/downloads192/sourcecode/graph/text_recognize/905475/face_detection/face_detection/face_database/acd.jpg');
+        // app.prettyPic('http://cn.faceplusplus.com/static/resources/python_demo/1.jpg');
+      })();
+    </script>
+  </body>
+</html>
